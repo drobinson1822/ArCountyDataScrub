@@ -1,0 +1,19 @@
+2025-06-13 15:52:48,470 - ERROR - Failed to load Parcel data: input/final_parcel_data.csv: [Errno 2] No such file or directory: 'input/final_parcel_data.csv'
+2025-06-13 15:55:24,553 - INFO - Parcel chunk 1: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part1.csv with 57784 rows.
+2025-06-13 15:55:24,667 - INFO - Parcel chunk 2: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part2.csv with 57784 rows.
+2025-06-13 15:55:24,787 - INFO - Parcel chunk 3: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part3.csv with 57782 rows.
+2025-06-13 15:55:24,802 - INFO - Sales data [36-21-31]: Loaded: output/36-21-31.csv with 6793 rows.
+2025-06-13 15:55:24,814 - INFO - Sales data [01-20-31]: Loaded: output/01-20-31.csv with 11936 rows.
+2025-06-13 15:55:24,818 - INFO - Sales data [06-20-30]: Loaded: output/06-20-30.csv with 3403 rows.
+2025-06-13 15:55:24,822 - INFO - Sales data [31-21-30]: Loaded: output/31-21-30.csv with 4483 rows.
+2025-06-13 15:55:24,823 - ERROR - Failed to load Sales data [12-20-31]: output/12-20-31.csv: [Errno 2] No such file or directory: 'output/12-20-31.csv'
+2025-06-13 15:55:24,823 - ERROR - Failed to load Sales data [07-20-30]: output/07-20-30.csv: [Errno 2] No such file or directory: 'output/07-20-30.csv'
+2025-06-13 15:55:24,823 - ERROR - Failed to load Sales data [08-20-30]: output/08-20-30.csv: [Errno 2] No such file or directory: 'output/08-20-30.csv'
+2025-06-13 15:55:24,823 - ERROR - Failed to load Sales data [09-20-30]: output/09-20-30.csv: [Errno 2] No such file or directory: 'output/09-20-30.csv'
+2025-06-13 15:55:24,823 - ERROR - Failed to load Sales data [35-21-31]: output/35-21-31.csv: [Errno 2] No such file or directory: 'output/35-21-31.csv'
+2025-06-13 15:55:24,824 - ERROR - Failed to load Sales data [27-21-31]: output/27-21-31.csv: [Errno 2] No such file or directory: 'output/27-21-31.csv'
+2025-06-13 15:55:24,824 - ERROR - Failed to load Sales data [10-20-31]: output/10-20-31.csv: [Errno 2] No such file or directory: 'output/10-20-31.csv'
+2025-06-13 15:55:24,872 - INFO - Filtered to 3331 most recent warranty deed sales.
+2025-06-13 15:55:24,898 - INFO - Merged result has 3346 records.
+2025-06-13 15:55:24,900 - INFO - Computed derived fields.
+2025-06-13 15:55:24,932 - INFO - ✅ Final dataset saved to: output/reporting/final_looker_ready_report.csv
