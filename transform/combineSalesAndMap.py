@@ -13,7 +13,7 @@ REPORTING_DIR = os.path.join(SALES_DIR, "reporting")
 OUTPUT_PATH = os.path.join(REPORTING_DIR, "final_looker_ready_report.csv")
 
 TARGET_STRS = ['36-21-31', '01-20-31', '06-20-30', '31-21-30', '12-20-31',
-               '07-20-30', '08-20-30', '09-20-30', '35-21-31', '27-21-31', '10-20-31']
+               '07-20-30', '08-20-30', '09-20-30', '35-21-31', '27-21-31', '10-20-31', '11-20-31']
 
 # === Logging Setup ===
 logging.basicConfig(
@@ -62,32 +62,87 @@ if not sales_frames:
 
 sales_df = pd.concat(sales_frames, ignore_index=True)
 
-# === Step 3: Filter to Warranty Deeds and Get Most Recent per Parcel ===
+# === Step 3: Filter for Most Recent Sale Logic ===
 try:
     sales_df["sold_date"] = pd.to_datetime(sales_df["sold_date"], errors="coerce")
-    wd_sales = sales_df[sales_df["deed_type"].str.startswith("WD", na=False)].copy()
-    wd_latest = wd_sales.sort_values("sold_date").groupby("PARCELID", as_index=False).last()
-    logging.info(f"Filtered to {len(wd_latest)} most recent warranty deed sales.")
-except Exception as e:
-    logging.error(f"Failed to process warranty deed filtering: {e}")
-    raise SystemExit("❌ Error during deed filtering. Exiting.")
 
-# === Step 4: Join to Parcel Data ===
-try:
-    merged = parcel_df.merge(wd_latest, on="PARCELID", how="inner", suffixes=("", "_sale"))
-    logging.info(f"Merged result has {len(merged)} records.")
-except Exception as e:
-    logging.error(f"Merge failed: {e}")
-    raise SystemExit("❌ Merge failed. Exiting.")
+    # 1. Most recent sale with "Warranty" in deed_type (case insensitive) and price > 0
+    warranty_sales = sales_df[
+        sales_df["deed_type"].str.contains("warranty", case=False, na=False) &
+        (sales_df["sold_price"] > 0)
+    ].copy()
+    latest_warranty = warranty_sales.sort_values("sold_date").groupby("PARCELID", as_index=False).last()
+    latest_warranty = latest_warranty.rename(columns={
+        "sold_date": "warranty_sold_date",
+        "sold_price": "warranty_sold_price",
+        "deed_type": "warranty_deed_type"
+    })
 
-# === Step 5: Create BI Fields ===
+    # 2. Most recent record of any type
+    latest_any = sales_df.sort_values("sold_date").groupby("PARCELID", as_index=False).last()
+
+    # 3. Merge and prefer warranty deed
+    merged_sales = latest_any.merge(
+        latest_warranty[["PARCELID", "warranty_sold_date", "warranty_sold_price", "warranty_deed_type"]],
+        on="PARCELID", how="left"
+    )
+
+    merged_sales["final_sold_date"] = merged_sales["warranty_sold_date"].combine_first(merged_sales["sold_date"])
+    merged_sales["final_sold_price"] = merged_sales["warranty_sold_price"].combine_first(merged_sales["sold_price"])
+    merged_sales["final_deed_type"] = merged_sales["warranty_deed_type"].combine_first(merged_sales["deed_type"])
+
+    final_sales = merged_sales[[
+        "PARCELID", "final_sold_date", "final_sold_price", "final_deed_type",
+        "acre_area", "has_house", "owner_state"
+    ]].rename(columns={
+        "final_sold_date": "sold_date",
+        "final_sold_price": "sold_price",
+        "final_deed_type": "deed_type"
+    })
+
+    logging.info(f"Prepared {len(final_sales)} most recent sales (Warranty-preferred) for merging.")
+except Exception as e:
+    logging.error(f"Failed to process deed preference logic: {e}")
+    raise SystemExit("❌ Error during preferred deed logic. Exiting.")
+
+# === Step 5: Join final sales with parcel info ===
 try:
+    merged = parcel_df.merge(final_sales, on="PARCELID", how="inner", suffixes=("", "_sale"))
+    logging.info(f"Merged parcel data with sales — final row count: {len(merged)}")
+
+    # Compute BI fields on merged result
     merged["sale_to_land_value_ratio"] = merged["sold_price"] / merged["LAND_VAL"].replace({0: None})
     merged["out_of_state_owner"] = merged["owner_state"].str.upper() != "AR"
     merged["sale_year"] = pd.DatetimeIndex(merged["sold_date"]).year
     logging.info("Computed derived fields.")
+
+    def safe_latlng(row):
+        if pd.notnull(row['lat']) and pd.notnull(row['lon']):
+            try:
+                return f"{round(row['lat'], 6)},{round(row['lon'], 6)}"
+            except Exception:
+                return ""
+        return ""
+
+    merged["latlngCoords"] = merged.apply(safe_latlng, axis=1)
+    logging.info("Created latlng field for mapping.")
+
+    def format_latlng(row):
+        if pd.notnull(row["lat"]) and pd.notnull(row["lon"]):
+            try:
+                if -90 <= row["lat"] <= 90 and -180 <= row["lon"] <= 180:
+                    return f"{row['lat']},{row['lon']}"
+            except Exception as e:
+                logging.warning(f"Invalid lat/lon on row: {row.name} — {e}")
+        return ""
+
+    merged["latlng"] = merged.apply(format_latlng, axis=1)
+
+    valid_count = (merged["latlng"] != "").sum()
+    logging.info(f"✅ Created 'latlng' values for {valid_count:,} parcels.")
 except Exception as e:
-    logging.error(f"Failed to compute derived fields: {e}")
+    logging.error(f"Failed during merging and BI field creation: {e}")
+    raise SystemExit("❌ Merge or BI computation failed. Exiting.")
 
 # === Step 6: Save Final Output to reporting/ Folder ===
 try:

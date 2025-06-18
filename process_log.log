@@ -17,3 +17,176 @@
 2025-06-13 15:55:24,898 - INFO - Merged result has 3346 records.
 2025-06-13 15:55:24,900 - INFO - Computed derived fields.
 2025-06-13 15:55:24,932 - INFO - ✅ Final dataset saved to: output/reporting/final_looker_ready_report.csv
+2025-06-13 16:03:14,416 - INFO - Parcel chunk 1: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part1.csv with 57784 rows.
+2025-06-13 16:03:14,544 - INFO - Parcel chunk 2: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part2.csv with 57784 rows.
+2025-06-13 16:03:14,672 - INFO - Parcel chunk 3: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part3.csv with 57782 rows.
+2025-06-13 16:03:14,689 - INFO - Sales data [36-21-31]: Loaded: output/36-21-31.csv with 6793 rows.
+2025-06-13 16:03:14,698 - INFO - Sales data [01-20-31]: Loaded: output/01-20-31.csv with 11936 rows.
+2025-06-13 16:03:14,701 - INFO - Sales data [06-20-30]: Loaded: output/06-20-30.csv with 3403 rows.
+2025-06-13 16:03:14,706 - INFO - Sales data [31-21-30]: Loaded: output/31-21-30.csv with 4483 rows.
+2025-06-13 16:03:14,706 - ERROR - Failed to load Sales data [12-20-31]: output/12-20-31.csv: [Errno 2] No such file or directory: 'output/12-20-31.csv'
+2025-06-13 16:03:14,706 - ERROR - Failed to load Sales data [07-20-30]: output/07-20-30.csv: [Errno 2] No such file or directory: 'output/07-20-30.csv'
+2025-06-13 16:03:14,706 - ERROR - Failed to load Sales data [08-20-30]: output/08-20-30.csv: [Errno 2] No such file or directory: 'output/08-20-30.csv'
+2025-06-13 16:03:14,707 - ERROR - Failed to load Sales data [09-20-30]: output/09-20-30.csv: [Errno 2] No such file or directory: 'output/09-20-30.csv'
+2025-06-13 16:03:14,707 - ERROR - Failed to load Sales data [35-21-31]: output/35-21-31.csv: [Errno 2] No such file or directory: 'output/35-21-31.csv'
+2025-06-13 16:03:14,707 - ERROR - Failed to load Sales data [27-21-31]: output/27-21-31.csv: [Errno 2] No such file or directory: 'output/27-21-31.csv'
+2025-06-13 16:03:14,707 - ERROR - Failed to load Sales data [10-20-31]: output/10-20-31.csv: [Errno 2] No such file or directory: 'output/10-20-31.csv'
+2025-06-13 16:03:14,765 - INFO - Prepared 3504 most recent sales (WD-preferred) for merging.
+2025-06-13 16:03:14,765 - ERROR - Failed to compute derived fields: 'LAND_VAL'
+2025-06-13 16:03:14,774 - INFO - ✅ Final dataset saved to: output/reporting/final_looker_ready_report.csv
+2025-06-13 16:08:38,715 - INFO - Parcel chunk 1: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part1.csv with 57784 rows.
+2025-06-13 16:08:38,836 - INFO - Parcel chunk 2: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part2.csv with 57784 rows.
+2025-06-13 16:08:38,951 - INFO - Parcel chunk 3: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part3.csv with 57782 rows.
+2025-06-13 16:08:38,965 - INFO - Sales data [36-21-31]: Loaded: output/36-21-31.csv with 6793 rows.
+2025-06-13 16:08:38,974 - INFO - Sales data [01-20-31]: Loaded: output/01-20-31.csv with 11936 rows.
+2025-06-13 16:08:38,978 - INFO - Sales data [06-20-30]: Loaded: output/06-20-30.csv with 3403 rows.
+2025-06-13 16:08:38,982 - INFO - Sales data [31-21-30]: Loaded: output/31-21-30.csv with 4483 rows.
+2025-06-13 16:08:38,983 - ERROR - Failed to load Sales data [12-20-31]: output/12-20-31.csv: [Errno 2] No such file or directory: 'output/12-20-31.csv'
+2025-06-13 16:08:38,983 - ERROR - Failed to load Sales data [07-20-30]: output/07-20-30.csv: [Errno 2] No such file or directory: 'output/07-20-30.csv'
+2025-06-13 16:08:38,983 - ERROR - Failed to load Sales data [08-20-30]: output/08-20-30.csv: [Errno 2] No such file or directory: 'output/08-20-30.csv'
+2025-06-13 16:08:38,983 - ERROR - Failed to load Sales data [09-20-30]: output/09-20-30.csv: [Errno 2] No such file or directory: 'output/09-20-30.csv'
+2025-06-13 16:08:38,983 - ERROR - Failed to load Sales data [35-21-31]: output/35-21-31.csv: [Errno 2] No such file or directory: 'output/35-21-31.csv'
+2025-06-13 16:08:38,984 - ERROR - Failed to load Sales data [27-21-31]: output/27-21-31.csv: [Errno 2] No such file or directory: 'output/27-21-31.csv'
+2025-06-13 16:08:38,984 - ERROR - Failed to load Sales data [10-20-31]: output/10-20-31.csv: [Errno 2] No such file or directory: 'output/10-20-31.csv'
+2025-06-13 16:08:39,042 - INFO - Prepared 3504 most recent sales (WD-preferred) for merging.
+2025-06-13 16:08:39,065 - INFO - Merged parcel data with sales — final row count: 3520
+2025-06-13 16:08:39,068 - INFO - Computed derived fields.
+2025-06-13 16:08:39,099 - INFO - ✅ Final dataset saved to: output/reporting/final_looker_ready_report.csv
+2025-06-13 16:26:00,654 - INFO - Parcel chunk 1: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part1.csv with 57784 rows.
+2025-06-13 16:26:00,774 - INFO - Parcel chunk 2: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part2.csv with 57784 rows.
+2025-06-13 16:26:00,893 - INFO - Parcel chunk 3: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part3.csv with 57782 rows.
+2025-06-13 16:26:00,908 - INFO - Sales data [36-21-31]: Loaded: output/36-21-31.csv with 6793 rows.
+2025-06-13 16:26:00,919 - INFO - Sales data [01-20-31]: Loaded: output/01-20-31.csv with 11936 rows.
+2025-06-13 16:26:00,922 - INFO - Sales data [06-20-30]: Loaded: output/06-20-30.csv with 3403 rows.
+2025-06-13 16:26:00,926 - INFO - Sales data [31-21-30]: Loaded: output/31-21-30.csv with 4483 rows.
+2025-06-13 16:26:00,927 - ERROR - Failed to load Sales data [12-20-31]: output/12-20-31.csv: [Errno 2] No such file or directory: 'output/12-20-31.csv'
+2025-06-13 16:26:00,927 - ERROR - Failed to load Sales data [07-20-30]: output/07-20-30.csv: [Errno 2] No such file or directory: 'output/07-20-30.csv'
+2025-06-13 16:26:00,927 - ERROR - Failed to load Sales data [08-20-30]: output/08-20-30.csv: [Errno 2] No such file or directory: 'output/08-20-30.csv'
+2025-06-13 16:26:00,927 - ERROR - Failed to load Sales data [09-20-30]: output/09-20-30.csv: [Errno 2] No such file or directory: 'output/09-20-30.csv'
+2025-06-13 16:26:00,928 - ERROR - Failed to load Sales data [35-21-31]: output/35-21-31.csv: [Errno 2] No such file or directory: 'output/35-21-31.csv'
+2025-06-13 16:26:00,928 - ERROR - Failed to load Sales data [27-21-31]: output/27-21-31.csv: [Errno 2] No such file or directory: 'output/27-21-31.csv'
+2025-06-13 16:26:00,928 - ERROR - Failed to load Sales data [10-20-31]: output/10-20-31.csv: [Errno 2] No such file or directory: 'output/10-20-31.csv'
+2025-06-13 16:26:00,989 - INFO - Prepared 3504 most recent sales (WD-preferred) for merging.
+2025-06-13 16:26:01,011 - INFO - Merged parcel data with sales — final row count: 3520
+2025-06-13 16:26:01,013 - INFO - Computed derived fields.
+2025-06-13 16:26:01,045 - INFO - Created latlng field for mapping.
+2025-06-13 16:26:01,078 - INFO - ✅ Final dataset saved to: output/reporting/final_looker_ready_report.csv
+2025-06-13 16:31:59,086 - INFO - Parcel chunk 1: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part1.csv with 57784 rows.
+2025-06-13 16:31:59,207 - INFO - Parcel chunk 2: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part2.csv with 57784 rows.
+2025-06-13 16:31:59,336 - INFO - Parcel chunk 3: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part3.csv with 57782 rows.
+2025-06-13 16:31:59,351 - INFO - Sales data [36-21-31]: Loaded: output/36-21-31.csv with 6793 rows.
+2025-06-13 16:31:59,362 - INFO - Sales data [01-20-31]: Loaded: output/01-20-31.csv with 11936 rows.
+2025-06-13 16:31:59,365 - INFO - Sales data [06-20-30]: Loaded: output/06-20-30.csv with 3403 rows.
+2025-06-13 16:31:59,369 - INFO - Sales data [31-21-30]: Loaded: output/31-21-30.csv with 4483 rows.
+2025-06-13 16:31:59,369 - ERROR - Failed to load Sales data [12-20-31]: output/12-20-31.csv: [Errno 2] No such file or directory: 'output/12-20-31.csv'
+2025-06-13 16:31:59,370 - ERROR - Failed to load Sales data [07-20-30]: output/07-20-30.csv: [Errno 2] No such file or directory: 'output/07-20-30.csv'
+2025-06-13 16:31:59,370 - ERROR - Failed to load Sales data [08-20-30]: output/08-20-30.csv: [Errno 2] No such file or directory: 'output/08-20-30.csv'
+2025-06-13 16:31:59,370 - ERROR - Failed to load Sales data [09-20-30]: output/09-20-30.csv: [Errno 2] No such file or directory: 'output/09-20-30.csv'
+2025-06-13 16:31:59,370 - ERROR - Failed to load Sales data [35-21-31]: output/35-21-31.csv: [Errno 2] No such file or directory: 'output/35-21-31.csv'
+2025-06-13 16:31:59,370 - ERROR - Failed to load Sales data [27-21-31]: output/27-21-31.csv: [Errno 2] No such file or directory: 'output/27-21-31.csv'
+2025-06-13 16:31:59,370 - ERROR - Failed to load Sales data [10-20-31]: output/10-20-31.csv: [Errno 2] No such file or directory: 'output/10-20-31.csv'
+2025-06-13 16:31:59,433 - INFO - Prepared 3504 most recent sales (WD-preferred) for merging.
+2025-06-13 16:31:59,459 - INFO - Merged parcel data with sales — final row count: 3520
+2025-06-13 16:31:59,462 - INFO - Computed derived fields.
+2025-06-13 16:31:59,493 - INFO - Created latlng field for mapping.
+2025-06-13 16:31:59,527 - INFO - ✅ Final dataset saved to: output/reporting/final_looker_ready_report.csv
+2025-06-13 16:37:33,456 - INFO - Parcel chunk 1: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part1.csv with 57784 rows.
+2025-06-13 16:37:33,577 - INFO - Parcel chunk 2: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part2.csv with 57784 rows.
+2025-06-13 16:37:33,693 - INFO - Parcel chunk 3: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part3.csv with 57782 rows.
+2025-06-13 16:37:33,706 - INFO - Sales data [36-21-31]: Loaded: output/36-21-31.csv with 6793 rows.
+2025-06-13 16:37:33,716 - INFO - Sales data [01-20-31]: Loaded: output/01-20-31.csv with 11936 rows.
+2025-06-13 16:37:33,719 - INFO - Sales data [06-20-30]: Loaded: output/06-20-30.csv with 3403 rows.
+2025-06-13 16:37:33,724 - INFO - Sales data [31-21-30]: Loaded: output/31-21-30.csv with 4483 rows.
+2025-06-13 16:37:33,724 - ERROR - Failed to load Sales data [12-20-31]: output/12-20-31.csv: [Errno 2] No such file or directory: 'output/12-20-31.csv'
+2025-06-13 16:37:33,724 - ERROR - Failed to load Sales data [07-20-30]: output/07-20-30.csv: [Errno 2] No such file or directory: 'output/07-20-30.csv'
+2025-06-13 16:37:33,724 - ERROR - Failed to load Sales data [08-20-30]: output/08-20-30.csv: [Errno 2] No such file or directory: 'output/08-20-30.csv'
+2025-06-13 16:37:33,725 - ERROR - Failed to load Sales data [09-20-30]: output/09-20-30.csv: [Errno 2] No such file or directory: 'output/09-20-30.csv'
+2025-06-13 16:37:33,725 - ERROR - Failed to load Sales data [35-21-31]: output/35-21-31.csv: [Errno 2] No such file or directory: 'output/35-21-31.csv'
+2025-06-13 16:37:33,725 - ERROR - Failed to load Sales data [27-21-31]: output/27-21-31.csv: [Errno 2] No such file or directory: 'output/27-21-31.csv'
+2025-06-13 16:37:33,725 - ERROR - Failed to load Sales data [10-20-31]: output/10-20-31.csv: [Errno 2] No such file or directory: 'output/10-20-31.csv'
+2025-06-13 16:37:33,786 - INFO - Prepared 3504 most recent sales (WD-preferred) for merging.
+2025-06-13 16:37:33,809 - INFO - Merged parcel data with sales — final row count: 3520
+2025-06-13 16:37:33,812 - INFO - Computed derived fields.
+2025-06-13 16:37:33,843 - INFO - Created latlng field for mapping.
+2025-06-13 16:37:33,876 - INFO - ✅ Final dataset saved to: output/reporting/final_looker_ready_report.csv
+2025-06-13 16:45:38,244 - INFO - Parcel chunk 1: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part1.csv with 57784 rows.
+2025-06-13 16:45:38,371 - INFO - Parcel chunk 2: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part2.csv with 57784 rows.
+2025-06-13 16:45:38,495 - INFO - Parcel chunk 3: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part3.csv with 57782 rows.
+2025-06-13 16:45:38,510 - INFO - Sales data [36-21-31]: Loaded: output/36-21-31.csv with 6793 rows.
+2025-06-13 16:45:38,521 - INFO - Sales data [01-20-31]: Loaded: output/01-20-31.csv with 11936 rows.
+2025-06-13 16:45:38,524 - INFO - Sales data [06-20-30]: Loaded: output/06-20-30.csv with 3403 rows.
+2025-06-13 16:45:38,528 - INFO - Sales data [31-21-30]: Loaded: output/31-21-30.csv with 4483 rows.
+2025-06-13 16:45:38,528 - ERROR - Failed to load Sales data [12-20-31]: output/12-20-31.csv: [Errno 2] No such file or directory: 'output/12-20-31.csv'
+2025-06-13 16:45:38,528 - ERROR - Failed to load Sales data [07-20-30]: output/07-20-30.csv: [Errno 2] No such file or directory: 'output/07-20-30.csv'
+2025-06-13 16:45:38,529 - ERROR - Failed to load Sales data [08-20-30]: output/08-20-30.csv: [Errno 2] No such file or directory: 'output/08-20-30.csv'
+2025-06-13 16:45:38,529 - ERROR - Failed to load Sales data [09-20-30]: output/09-20-30.csv: [Errno 2] No such file or directory: 'output/09-20-30.csv'
+2025-06-13 16:45:38,529 - ERROR - Failed to load Sales data [35-21-31]: output/35-21-31.csv: [Errno 2] No such file or directory: 'output/35-21-31.csv'
+2025-06-13 16:45:38,529 - ERROR - Failed to load Sales data [27-21-31]: output/27-21-31.csv: [Errno 2] No such file or directory: 'output/27-21-31.csv'
+2025-06-13 16:45:38,529 - ERROR - Failed to load Sales data [10-20-31]: output/10-20-31.csv: [Errno 2] No such file or directory: 'output/10-20-31.csv'
+2025-06-13 16:45:38,592 - INFO - Prepared 3504 most recent sales (WD-preferred) for merging.
+2025-06-13 16:45:38,615 - INFO - Merged parcel data with sales — final row count: 3520
+2025-06-13 16:45:38,619 - INFO - Computed derived fields.
+2025-06-13 16:45:38,650 - INFO - Created latlng field for mapping.
+2025-06-13 16:45:38,689 - INFO - ✅ Created 'latlng' values for 3,520 parcels.
+2025-06-13 16:45:38,727 - INFO - ✅ Final dataset saved to: output/reporting/final_looker_ready_report.csv
+2025-06-16 20:58:13,290 - INFO - Parcel chunk 1: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part1.csv with 57784 rows.
+2025-06-16 20:58:13,412 - INFO - Parcel chunk 2: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part2.csv with 57784 rows.
+2025-06-16 20:58:13,535 - INFO - Parcel chunk 3: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part3.csv with 57782 rows.
+2025-06-16 20:58:13,549 - INFO - Sales data [36-21-31]: Loaded: output/36-21-31.csv with 6802 rows.
+2025-06-16 20:58:13,560 - INFO - Sales data [01-20-31]: Loaded: output/01-20-31.csv with 12094 rows.
+2025-06-16 20:58:13,564 - INFO - Sales data [06-20-30]: Loaded: output/06-20-30.csv with 3428 rows.
+2025-06-16 20:58:13,568 - INFO - Sales data [31-21-30]: Loaded: output/31-21-30.csv with 5342 rows.
+2025-06-16 20:58:13,570 - INFO - Sales data [12-20-31]: Loaded: output/12-20-31.csv with 314 rows.
+2025-06-16 20:58:13,572 - INFO - Sales data [07-20-30]: Loaded: output/07-20-30.csv with 923 rows.
+2025-06-16 20:58:13,574 - INFO - Sales data [08-20-30]: Loaded: output/08-20-30.csv with 1125 rows.
+2025-06-16 20:58:13,576 - INFO - Sales data [09-20-30]: Loaded: output/09-20-30.csv with 639 rows.
+2025-06-16 20:58:13,581 - INFO - Sales data [35-21-31]: Loaded: output/35-21-31.csv with 6603 rows.
+2025-06-16 20:58:13,587 - INFO - Sales data [27-21-31]: Loaded: output/27-21-31.csv with 6071 rows.
+2025-06-16 20:58:13,589 - INFO - Sales data [10-20-31]: Loaded: output/10-20-31.csv with 210 rows.
+2025-06-16 20:58:13,677 - INFO - Prepared 5733 most recent sales (WD-preferred) for merging.
+2025-06-16 20:58:13,700 - INFO - Merged parcel data with sales — final row count: 5749
+2025-06-16 20:58:13,703 - INFO - Computed derived fields.
+2025-06-16 20:58:13,756 - INFO - Created latlng field for mapping.
+2025-06-16 20:58:13,818 - INFO - ✅ Created 'latlng' values for 5,749 parcels.
+2025-06-16 20:58:13,874 - INFO - ✅ Final dataset saved to: output/reporting/final_looker_ready_report.csv
+2025-06-16 21:08:07,423 - INFO - Parcel chunk 1: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part1.csv with 57784 rows.
+2025-06-16 21:08:07,546 - INFO - Parcel chunk 2: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part2.csv with 57784 rows.
+2025-06-16 21:08:07,659 - INFO - Parcel chunk 3: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part3.csv with 57782 rows.
+2025-06-16 21:08:07,674 - INFO - Sales data [36-21-31]: Loaded: output/36-21-31.csv with 6802 rows.
+2025-06-16 21:08:07,684 - INFO - Sales data [01-20-31]: Loaded: output/01-20-31.csv with 12094 rows.
+2025-06-16 21:08:07,687 - INFO - Sales data [06-20-30]: Loaded: output/06-20-30.csv with 3428 rows.
+2025-06-16 21:08:07,691 - INFO - Sales data [31-21-30]: Loaded: output/31-21-30.csv with 5342 rows.
+2025-06-16 21:08:07,693 - INFO - Sales data [12-20-31]: Loaded: output/12-20-31.csv with 314 rows.
+2025-06-16 21:08:07,695 - INFO - Sales data [07-20-30]: Loaded: output/07-20-30.csv with 923 rows.
+2025-06-16 21:08:07,697 - INFO - Sales data [08-20-30]: Loaded: output/08-20-30.csv with 1125 rows.
+2025-06-16 21:08:07,699 - INFO - Sales data [09-20-30]: Loaded: output/09-20-30.csv with 639 rows.
+2025-06-16 21:08:07,704 - INFO - Sales data [35-21-31]: Loaded: output/35-21-31.csv with 6603 rows.
+2025-06-16 21:08:07,709 - INFO - Sales data [27-21-31]: Loaded: output/27-21-31.csv with 6071 rows.
+2025-06-16 21:08:07,711 - INFO - Sales data [10-20-31]: Loaded: output/10-20-31.csv with 210 rows.
+2025-06-16 21:08:07,801 - INFO - Prepared 5733 most recent sales (Warranty-preferred) for merging.
+2025-06-16 21:08:07,824 - INFO - Merged parcel data with sales — final row count: 5749
+2025-06-16 21:08:07,827 - INFO - Computed derived fields.
+2025-06-16 21:08:07,877 - INFO - Created latlng field for mapping.
+2025-06-16 21:08:07,938 - INFO - ✅ Created 'latlng' values for 5,749 parcels.
+2025-06-16 21:08:07,995 - INFO - ✅ Final dataset saved to: output/reporting/final_looker_ready_report.csv
+2025-06-16 21:21:16,586 - INFO - Parcel chunk 1: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part1.csv with 57784 rows.
+2025-06-16 21:21:16,711 - INFO - Parcel chunk 2: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part2.csv with 57784 rows.
+2025-06-16 21:21:16,836 - INFO - Parcel chunk 3: Loaded: input/transformedGeoDB/benton_parcels_with_coords_20250613_part3.csv with 57782 rows.
+2025-06-16 21:21:16,849 - INFO - Sales data [36-21-31]: Loaded: output/36-21-31.csv with 6802 rows.
+2025-06-16 21:21:16,859 - INFO - Sales data [01-20-31]: Loaded: output/01-20-31.csv with 12094 rows.
+2025-06-16 21:21:16,862 - INFO - Sales data [06-20-30]: Loaded: output/06-20-30.csv with 3428 rows.
+2025-06-16 21:21:16,867 - INFO - Sales data [31-21-30]: Loaded: output/31-21-30.csv with 5342 rows.
+2025-06-16 21:21:16,869 - INFO - Sales data [12-20-31]: Loaded: output/12-20-31.csv with 314 rows.
+2025-06-16 21:21:16,871 - INFO - Sales data [07-20-30]: Loaded: output/07-20-30.csv with 923 rows.
+2025-06-16 21:21:16,872 - INFO - Sales data [08-20-30]: Loaded: output/08-20-30.csv with 1125 rows.
+2025-06-16 21:21:16,875 - INFO - Sales data [09-20-30]: Loaded: output/09-20-30.csv with 639 rows.
+2025-06-16 21:21:16,880 - INFO - Sales data [35-21-31]: Loaded: output/35-21-31.csv with 6603 rows.
+2025-06-16 21:21:16,885 - INFO - Sales data [27-21-31]: Loaded: output/27-21-31.csv with 6071 rows.
+2025-06-16 21:21:16,887 - INFO - Sales data [10-20-31]: Loaded: output/10-20-31.csv with 210 rows.
+2025-06-16 21:21:16,891 - INFO - Sales data [11-20-31]: Loaded: output/11-20-31.csv with 4902 rows.
+2025-06-16 21:21:16,989 - INFO - Prepared 6364 most recent sales (Warranty-preferred) for merging.
+2025-06-16 21:21:17,017 - INFO - Merged parcel data with sales — final row count: 6381
+2025-06-16 21:21:17,021 - INFO - Computed derived fields.
+2025-06-16 21:21:17,079 - INFO - Created latlng field for mapping.
+2025-06-16 21:21:17,174 - INFO - ✅ Created 'latlng' values for 6,381 parcels.
+2025-06-16 21:21:17,236 - INFO - ✅ Final dataset saved to: output/reporting/final_looker_ready_report.csv

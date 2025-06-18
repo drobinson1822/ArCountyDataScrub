@@ -15,8 +15,8 @@ CHUNK_FOLDER = 'input/transformedGeoDB'
 CHUNK_BASENAME = 'benton_parcels_with_coords_20250613'
 CHUNK_COUNT = 3
 
-TARGET_STRS = ['36-21-31', '01-20-31', '06-20-30', '31-21-30', '12-20-31', '07-20-30',
-               '08-20-30', '09-20-30', '35-21-31', '27-21-31', '10-20-31']
+TARGET_STRS = ['36-21-31', '01-20-31', '02-20-31', '03-20-31', '06-20-30', '31-21-30', '12-20-31', '07-20-30',
+               '08-20-30', '09-20-30', '10-20-30', '15-20-30', '35-21-31', '26-21-31', '27-21-31', '10-20-31', '11-20-31']
 OUTPUT_DIR = 'output'
 
 HEADERS = {
@@ -183,5 +183,5 @@ def main():
 
         save_progress(completed, progress_file)
         logging.info(f"Finished {target_str}")
-        
+
 main()
